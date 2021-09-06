@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <io.a3dv.VIRec.AspectFrameLayout
+        android:id="@+id/cameraPreview_afl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true">
+
+        <io.a3dv.VIRec.SampleGLView
+            android:id="@+id/cameraPreview_surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <io.a3dv.VIRec.SampleGLView
+                android:id="@+id/cameraPreview_surfaceView2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintWidth_percent="0.25" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </io.a3dv.VIRec.AspectFrameLayout>
+
+    <TextView
+        android:id="@+id/cameraParams_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/cameraPreview_surfaceView"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="25dp"
+        android:text="@string/camera_params"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/captureResult_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cameraParams_text"
+        android:layout_alignStart="@id/cameraPreview_surfaceView"
+        android:layout_marginStart="25dp"
+        android:text="@string/focal_length_exposure_time" />
+
+    <TextView
+        android:id="@+id/cameraParams_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/captureResult_text"
+        android:layout_alignStart="@id/cameraPreview_surfaceView"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="5dp"
+        android:text="@string/camera_params"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/captureResult_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cameraParams_text2"
+        android:layout_alignStart="@id/cameraPreview_surfaceView"
+        android:layout_marginStart="25dp"
+        android:text="@string/focal_length_exposure_time_2" />
+
+    <TextView
+        android:id="@+id/cameraOutputDirLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/captureResult_text2"
+        android:layout_alignStart="@id/cameraParams_text"
+        android:layout_marginTop="5dp"
+        android:text="@string/cameraOutputDirLabel_text" />
+
+    <TextView
+        android:id="@+id/cameraOutputDir_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/cameraOutputDirLabel"
+        android:layout_alignBottom="@id/cameraOutputDirLabel"
+        android:layout_toEndOf="@id/cameraOutputDirLabel"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="@string/cameraOutputDir_text" />
+
+    <TextView
+        android:id="@+id/numSnapshotLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cameraOutputDirLabel"
+        android:layout_alignStart="@id/cameraParams_text"
+        android:text="@string/numSnapshotLabel" />
+
+    <TextView
+        android:id="@+id/numSnapshot_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/numSnapshotLabel"
+        android:layout_alignBottom="@id/numSnapshotLabel"
+        android:layout_toEndOf="@id/numSnapshotLabel"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="@string/numSnapshotText" />
+
+    <TextView
+        android:id="@+id/gps_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/numSnapshot_text"
+        android:layout_alignStart="@id/cameraParams_text"
+        android:layout_marginTop="10dp"
+        android:text="@string/gpsStatusDisabled" />
+</merge>

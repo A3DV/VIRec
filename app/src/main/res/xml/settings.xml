@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="Camera Settings"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreference
+            android:key="switchManualControl"
+            android:summaryOff="Off"
+            android:summaryOn="On"
+            android:title="Manually Control ISO and Exposure"
+            app:iconSpaceReserved="false" />
+
+        <!--        <ListPreference-->
+        <!--            android:key="prefFocusDistance"-->
+        <!--            android:title="Adjust Focus Distances"-->
+        <!--            android:summary="Lock the focus distance (mm) before tap to focus" />-->
+
+        <EditTextPreference
+            android:dialogTitle="Adjust ISO"
+            android:key="prefISO"
+            android:summary="Lock ISO to a custom value"
+            android:title="Adjust ISO"
+            app:iconSpaceReserved="false" />
+
+        <EditTextPreference
+            android:dialogTitle="Adjust exposure time"
+            android:key="prefExposureTime"
+            android:summary="Lock exposure time to a custom value"
+            android:title="Adjust Exposure Time"
+            app:iconSpaceReserved="false" />
+
+        <ListPreference
+            android:key="prefCamera"
+            android:summary="%s"
+            android:title="Main Camera"
+            app:iconSpaceReserved="false" />
+
+        <ListPreference
+            android:enabled="true"
+            android:key="prefCamera2"
+            android:summary="%s"
+            android:title="Secondary Camera"
+            app:iconSpaceReserved="false" />
+
+        <ListPreference
+            android:key="prefSizeRaw"
+            android:summary="%s"
+            android:title="Frame Size"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="IMU Settings"
+        app:iconSpaceReserved="false">
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/imuFreq"
+            android:entryValues="@array/imuFreqValues"
+            android:key="prefImuFreq"
+            android:summary="Frequency the IMU is sampled at"
+            android:title="IMU Frequency"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

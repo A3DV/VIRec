@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">VIRec</string>
+    <string name="cameraOutputDirLabel_text">Output folder:</string>
+    <string name="cameraOutputDir_text">[dir name]</string>
+    <string name="toggleRecordingOn">Record</string>
+    <string name="toggleRecordingOff">Stop</string>
+    <string name="numSnapshotLabel">#Snapshot</string>
+    <string name="numSnapshotText">0</string>
+    <string name="gpsStatusDisabled">GPS is disabled!</string>
+    <string name="gpsLooking">Looking for GPS data…</string>
+
+    <string-array name="cameraFilterNames">
+        <item>Normal</item>
+        <item>Black &amp; white</item>
+        <item>Blur</item>
+        <item>Sharpen</item>
+        <item>Edge detect</item>
+        <item>Emboss</item>
+    </string-array>
+
+    <string name="link_foreword">The source code for the app is available at</string>
+    <string name="title_about">About</string>
+    <string name="title_imu">IMU</string>
+    <string name="title_settings">Settings</string>
+    <string name="focal_length_exposure_time">focal length : exposure time</string>
+    <string name="camera_params">[?]</string>
+    <string name="focal_length_exposure_time_2">focal length : exposure time</string>
+    <string name="created_by">VIRec is developed by A3DV team for efficiently recording synced dual camera, IMU and GPS data on a mobile device.</string>
+    <string name="record">Record</string>
+    <string name="stop">Stop</string>
+    <string name="more">More Options</string>
+    <string name="about_data">
+        \n
+        All data sessions are saved in \'/Android/data/io.a3dv.VIRec/files/data/\' on the SD card. Each data session in a folder named after the local time at the start of recording has nine files:\n\n
+        1. <b>movie.mp4</b>: Main camera frames.\n
+        2. <b>movie2.mp4</b>: Secondary camera frames.\n
+        3. <b>frame_timestamps.txt</b>: timestamp for each frame of main camera.\n
+        4. <b>frame_timestamps2.txt</b>: timestamp for each frame of secondary camera.\n
+        5. <b>movie_metadata.csv</b>: Main camera metadata including focal distance, focal length in pixels, etc.\n
+        6. <b>movie_metadata2.csv</b>: Secondary camera metadata including focal distance, focal length in pixels, etc.\n
+        7. <b>edge_epochs.txt</b>: timestamps at the start and end of recording.\n
+        8. <b>gyro_accel.csv</b>: IMU data.\n
+        9. <b>location.csv</b>: GPS data.\n
+    </string>
+    <string name="versionName">VIRec v%1$s</string>
+</resources>
