@@ -2,6 +2,8 @@
 
 Record camera frames at ~30fps from one or two camera sensors, Inertial Measurement Unit (IMU) measurements at ~100Hz and GPS locations data synced to one clock source on Android devices.
 
+The app is released at [here](https://github.com/A3DV/VIRec/releases).
+
 # Description
 
 The app is developed from the [Grafika](https://github.com/google/grafika) project.
